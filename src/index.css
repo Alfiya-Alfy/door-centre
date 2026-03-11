@@ -128,6 +128,52 @@ body {
   opacity: 1;
 }
 
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  width: 220px;
+  list-style: none;
+  padding: 15px 0;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition);
+  padding-top: 25px; /* Offset to bridge the gap */
+  background: rgba(26, 26, 26, 0.95); /* Slightly darker for better contrast */
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 25px;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(201, 160, 80, 0.1);
+  color: var(--primary);
+}
+
 /* Hero Section */
 .hero {
   height: 100vh;

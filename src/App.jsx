@@ -27,8 +27,23 @@ function App() {
           <div className="logo-text">AMBATTU <span>DOOR CENTRE</span></div>
           <ul className="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#services">Services</a></li>
+            <li className="dropdown">
+              <a href="#products">Products</a>
+              <ul className="dropdown-menu glass">
+                <li><a href="#products">UPVC Solutions</a></li>
+                <li><a href="#products">Steel Security</a></li>
+                <li><a href="#products">FRP Designer</a></li>
+                <li><a href="#products">Wooden Finish</a></li>
+              </ul>
+            </li>
+            <li className="dropdown">
+              <a href="#services">Services</a>
+              <ul className="dropdown-menu glass">
+                <li><a href="#services">Professional Installation</a></li>
+                <li><a href="#services">Custom Design</a></li>
+                <li><a href="#services">After-Sales Support</a></li>
+              </ul>
+            </li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
