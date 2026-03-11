@@ -3,6 +3,8 @@ import './index.css';
 import heroImg from './assets/images/hero.png';
 import steelDoorImg from './assets/images/steel-door.png';
 import upvcWindowImg from './assets/images/upvc-window.png';
+import installImg from './assets/images/installation.png';
+import customImg from './assets/images/custom-design.png';
 
 function App() {
   useEffect(() => {
@@ -26,6 +28,7 @@ function App() {
           <ul className="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#products">Products</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -39,8 +42,8 @@ function App() {
           <h1>Premium Doors & Windows for <span>Modern Living</span></h1>
           <p>Exquisite UPVC, Steel, and FRP solutions crafted for durability and elegance.</p>
           <div className="hero-btns">
-            <button className="btn-primary">Explore Collection</button>
-            <button className="btn-secondary">Our services</button>
+            <button className="btn-primary" onClick={() => document.getElementById('products').scrollIntoView({ behavior: 'smooth' })}>Explore Collection</button>
+            <button className="btn-secondary" onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}>Our services</button>
           </div>
         </div>
       </section>
@@ -64,6 +67,42 @@ function App() {
               <img src={heroImg} alt="FRP Doors" />
               <h3>FRP Designer</h3>
               <p>Waterproof and decorative doors for every interior.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="services-section glass">
+        <div className="container">
+          <h2 className="section-title animate-on-scroll">Professional <span>Services</span></h2>
+          <div className="services-grid">
+            <div className="service-card animate-on-scroll">
+              <div className="service-img-wrap">
+                <img src={installImg} alt="Installation" />
+              </div>
+              <div className="service-info">
+                <h3>Expert Installation</h3>
+                <p>Our certified technicians ensure every door and window is fitted with millimetric precision for maximum insulation and security.</p>
+              </div>
+            </div>
+            <div className="service-card animate-on-scroll">
+              <div className="service-img-wrap">
+                <img src={customImg} alt="Customization" />
+              </div>
+              <div className="service-info">
+                <h3>Custom Design</h3>
+                <p>We work with architects and homeowners to create bespoke solutions that perfectly match your home's unique aesthetic.</p>
+              </div>
+            </div>
+            <div className="service-card animate-on-scroll">
+              <div className="service-img-wrap">
+                <img src={steelDoorImg} alt="Support" />
+              </div>
+              <div className="service-info">
+                <h3>After-Sales Support</h3>
+                <p>Our commitment doesn't end at installation. We provide comprehensive maintenance and quick-response support for all our products.</p>
+              </div>
             </div>
           </div>
         </div>
